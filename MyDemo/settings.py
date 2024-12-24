@@ -166,21 +166,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'jaydeeppatidrj@gmail.com'
-# EMAIL_HOST_PASSWORD = 'atdj xwot hvuf qypc'
+# EMAIL_HOST_USER = 'your Gmail id'
+# EMAIL_HOST_PASSWORD = 'your Gmail password'
 
-# DEFAULT_FROM_EMAIL = 'jaydeeppatidarj@gmail.com'
-# ADMIN_EMAIL = 'jaydeeppatidarj@gmail.com'
+# DEFAULT_FROM_EMAIL = 'your default gmail'
+# ADMIN_EMAIL = 'your admin gmail'
 
+# mailtrap.io
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_PORT = 2525
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = '7db24f7bc1ed78'
-EMAIL_HOST_PASSWORD = '1eee12d96e0bdd'
+EMAIL_HOST_USER = 'mailtrap user name or your gamil'
+EMAIL_HOST_PASSWORD = 'mailtrap password or your gamil password'
 EMAIL_USE_SSL = False
-DEFAULT_FROM_EMAIL = 'jaydeeppatidarj@gmail.com'
-ADMIN_EMAIL = 'jaydeeppatidarj@gmail.com'
+DEFAULT_FROM_EMAIL = 'your default gmail'
+ADMIN_EMAIL = 'your admin gmail'
 
 
 
