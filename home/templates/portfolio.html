@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %} 
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <div class="filters">
+                <button data-filter="all" class="filter-btn active">All</button>
+                {% for code, name in categories %}
+                <button data-filter="{{ code }}" class="filter-btn">{{ name }}</button>
+                {% endfor %}
+            </div>
+            <div class="portfolio-grid">
+                {% for item in portfolio_items %}
+                <div class="portfolio-item" data-category="{{ item.category }}">
+                    <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                    <div class="portfolio-overlay">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
+
+</body>
+<script src="{% static 'protfolio.js' %}"></script>
+</html>

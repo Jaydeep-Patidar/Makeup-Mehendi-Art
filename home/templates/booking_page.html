@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <link rel="stylesheet" href="{% static 'booking.css' %}">
+
+</head>
+<body>
+    {% include 'navbar.html' %} 
+
+    <h1>Book a Service</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% include 'footer.html' %}
+
+</body>
+</html>

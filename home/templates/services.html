@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="{% static 'services.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %} 
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Our Services</h1>
+        <p>Explore our wide range of professional makeup and mehendi services tailored to every occasion.</p>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services">
+        {% for service in services %}
+        <div class="service-card">
+            <img src="{{ service.image.url }}" alt="{{ service.title }}">
+            <h2>{{ service.title }}</h2>
+            <p>{{ service.description }}</p>
+        </div>
+        {% endfor %}
+    </section>
+    {% include 'footer.html' %}
+
+</body>
+</html>

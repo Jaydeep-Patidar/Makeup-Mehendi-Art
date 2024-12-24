@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup & Mehendi Art</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+
+<body>
+    <!-- Navbar -->
+   {% include 'navbar.html' %} 
+<!-- 
+    <div id="about" style="height: 100vh; background-color: lightcoral; text-align: center; padding: 20px;">About
+        Section</div>
+    <div id="services" style="height: 100vh; background-color: lightgreen; text-align: center; padding: 20px;">Services
+        Section</div>
+    <div id="portfolio" style="height: 100vh; background-color: lightpink; text-align: center; padding: 20px;">Portfolio
+        Section</div>
+    <div id="contact" style="height: 100vh; background-color: lightgray; text-align: center; padding: 20px;">Contact
+        Section</div> -->
+
+
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to Makeup & Mehendi Art</h1>
+        <p>Transforming Moments with Stunning Makeup and Intricate Mehendi Art</p>
+        <a href="/portfolio/" class="btn">View Portfolio</a>
+        <a href="/booking/" class="btn">Book Now</a>
+    </header>
+
+    <!-- About Us -->
+    <div id="about">
+    <section class="about">
+        <h2>About Us</h2>
+        <p>We specialize in creating magical transformations with makeup and mehendi for every occasion.</p>
+        <p> Welcome to <b>"Makeup and Mehandi Art"</b>, where beauty meets tradition!
+
+            We are a passionate team of professional makeup artists and mehndi (henna) designers dedicated to enhancing
+            your natural beauty and adding an artistic touch to your special moments. Whether you’re looking for a
+            flawless makeup look or intricate mehndi designs, we provide personalized services tailored to your style
+            and occasion.
+
+        <h3>Our Expertise</h3>
+        <b>Makeup Services:</b> From everyday elegance to bridal glam, our makeup services are crafted to make you look
+        and feel your best. We specialize in bridal makeup, party makeup, HD makeup, and airbrush techniques, ensuring
+        long-lasting and picture-perfect results. <br>
+        <b>Mehndi Art:</b> Our mehndi designs blend tradition and creativity, offering intricate patterns for weddings,
+        festivals, and celebrations. From classic bridal mehndi to trendy contemporary styles, our designs are sure to
+        leave a lasting impression. <br>
+        <h3>Why Choose Us?</h3>
+        <b>Personalized Approach:</b> Every client is unique, and we work closely with you to create looks that reflect
+        your personality and preferences. <br>
+        <b>High-Quality Products:</b> We use only premium-quality makeup products and natural henna to ensure safety and
+        flawless results. <br>
+        <b>Attention to Detail:</b> Whether it’s a perfect winged eyeliner or a symmetrical mehndi motif, we pride
+        ourselves on precision and excellence. <br>
+        <b>On-Time Service:</b> We value your time and ensure timely delivery of our services to keep your day
+        stress-free. <br>
+        At <b>"Makeup and mehandi"</b> Art, we believe that beauty is an art, and every occasion is a canvas. Let us be
+        a part of your journey to create unforgettable memories with our makeup and mehndi artistry.
+        Contact us today to book your session and experience the magic of beauty and tradition!
+        </p>
+    </section>
+</div>
+    <!-- Services -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            {% for service in services %}
+            <div class="service-item">
+                <img src="{{ service.image.url }}" alt="{{ service.title }}">
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/services/" class="btn">See All Services</a>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio">
+        <h2>Featured Portfolio</h2>
+        <div class="portfolio-gallery">
+            {% for item in portfolio_items %}
+            <div class="portfolio-item">
+                <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                <h3>{{ item.title }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/portfolio/" class="btn">View Full Portfolio</a>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-list">
+            {% for testimonial in testimonials %}
+            <div class="testimonial-item">
+                {% if testimonial.image %}
+                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.client_name }}">
+                {% endif %}
+                <p>"{{ testimonial.content }}"</p>
+                <p>- {{ testimonial.client_name }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #f8b400;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Field Styles */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+form input, 
+form select, 
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input:focus, 
+form select:focus, 
+form textarea:focus {
+    border-color: #888;
+    outline: none;
+    box-shadow: 0 0 3px #888;
+}
+
+/* Submit Button */
+form button {
+    background-color: #f8b400;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 ,auto;
+}
+
+form button:hover {
+    background-color: #e0a700;
+}
+
+/* Booking Confirmation Styles */
+.booking-confirmation {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.booking-confirmation h1 {
+    color: #444;
+}
+
+.booking-confirmation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+.booking-confirmation li {
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Styles */
+#calendar {
+    max-width: 90%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
