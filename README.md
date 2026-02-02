@@ -133,10 +133,6 @@ MyDemo/
 4. Push to branch: `git push origin main`
 5. Submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Contact
 
 For questions or support, contact [jaydeeppatidar2301@gmail.com].
