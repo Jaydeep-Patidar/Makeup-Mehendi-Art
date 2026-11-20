@@ -27,13 +27,7 @@ The project provides a web presence for a makeup and mehendi business, with acco
 
 ## Application screenshots
 
-The following screenshots are taken from the project screen recording and show the main website pages.
-
-<p align="center">
-  <img src="screenshots/selected-pages.webp" alt="Makeup and Mehendi Art website screenshots: Home, Portfolio, Services, Contact and Testimonials" width="95%">
-</p>
-
-**Pages shown:** Home · Portfolio · Services · Contact · Testimonials
+Screenshots of the Home, Portfolio, Services, Contact, and Testimonials pages will be added here.
 
 ## Tech stack
 
