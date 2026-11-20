@@ -27,7 +27,13 @@ The project provides a web presence for a makeup and mehendi business, with acco
 
 ## Application screenshots
 
-Screenshots of the Home, Portfolio, Services, Contact, and Testimonials pages will be added here.
+These screenshots are captured from the supplied screen recording of the running application.
+
+<p align="center">
+  <img src="screenshots/project-pages.webp" alt="Actual screenshots of the Home, Portfolio, Services, Contact and Testimonials pages" width="95%">
+</p>
+
+**Pages shown:** Home · Portfolio · Services · Contact · Testimonials
 
 ## Tech stack
 
