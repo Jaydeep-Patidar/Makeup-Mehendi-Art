@@ -27,13 +27,17 @@ The project provides a web presence for a makeup and mehendi business, with acco
 
 ## Application screenshots
 
-These screenshots are captured from the supplied screen recording of the running application.
-
+### Home
 <p align="center">
-  <img src="screenshots/project-pages.webp" alt="Actual screenshots of the Home, Portfolio, Services, Contact and Testimonials pages" width="95%">
+  <img src="screenshots/home.webp" alt="Makeup and Mehendi Art website home page" width="100%">
 </p>
 
-**Pages shown:** Home · Portfolio · Services · Contact · Testimonials
+### Other application pages
+<p align="center">
+  <img src="screenshots/project-pages.webp" alt="Portfolio, Services, Contact and Testimonials pages" width="100%">
+</p>
+
+> The Home page is available as an individual screenshot. The remaining pages are currently shown in the existing overview image; their individual image files are not yet committed.
 
 ## Tech stack
 
@@ -51,21 +55,9 @@ These screenshots are captured from the supplied screen recording of the running
 ```text
 Makeup-Mehendi-Art/
 ├── MyDemo/                 # Django project configuration
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
 ├── accounts/               # Registration, login, logout
-│   ├── accounts_url.py
-│   ├── forms.py
-│   └── views.py
 ├── home/                   # Website pages and business features
-│   ├── migrations/
-│   ├── templates/
-│   ├── models.py
-│   ├── forms.py
-│   ├── views.py
-│   └── admin.py
+├── screenshots/            # Application screenshots
 ├── public/                 # Project static assets
 ├── media/                  # User-uploaded media (local only)
 ├── .env.example            # Environment variable reference
@@ -149,7 +141,7 @@ Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 | `/booking/` | Appointment booking |
 | `/booking/data/` | Booking calendar data |
 | `/contact/` | Contact form |
-| `/accounts/login/` | Account login (see accounts URL configuration) |
+| `/accounts/login/` | Account login |
 | `/admin/` | Django administration |
 
 Some website pages are protected by login. Create an account through the application's registration page before accessing protected pages.
@@ -158,7 +150,7 @@ Some website pages are protected by login. Create an account through the applica
 
 The default development email backend writes messages to the terminal. To enable SMTP, configure the following environment variables:
 
-- `EMAIL_BACKEND` — for example, `django.core.mail.backends.smtp.EmailBackend`
+- `EMAIL_BACKEND`
 - `EMAIL_HOST`
 - `EMAIL_PORT`
 - `EMAIL_USE_TLS`
